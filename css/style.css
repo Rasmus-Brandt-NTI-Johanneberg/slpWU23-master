@@ -5,11 +5,11 @@ body{
     margin: 0;
 }
 
-
 /* Home Page CSS */
 
 #home_container{
     height: auto;
+    margin: 0;
 }
 
 
@@ -18,12 +18,32 @@ body{
     /* General CSS*/
 
     .header_universal{
-        display: flex;
+        display: grid;
         background-color: green;
         position: fixed;
         z-index: 1;
         height: 5vh;
         width: 100vw;
+        grid-template-columns: 10% 1fr;
+        grid-template-areas:
+        'nb hl';
+    }
+
+    .nav_button{
+        grid-area: nb;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .nav_button .material-icons{
+        font-size: 2rem;
+
+    }
+
+    .header_logo{
+        grid-area: hl;
+        background-color: aquamarine;
     }
 
     
