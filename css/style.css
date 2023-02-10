@@ -1,0 +1,53 @@
+/* General CSS */
+
+body{
+    height: auto;
+    margin: 0;
+}
+
+
+/* Home Page CSS */
+
+#home_container{
+    height: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* General CSS*/
+
+    .header_universal{
+        display: flex;
+        background-color: green;
+        position: fixed;
+        z-index: 1;
+        height: 100px;
+    }
+
+    
+    /* Home Page CSS */
+
+    #home_container{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 30vh 1fr;
+        grid-template-areas: 
+        'hi'
+        'in';
+    }
+
+    #home_image{
+        grid-area: hi;
+        background-color: blue;
+
+    }
+
+    #home_info{
+        grid-area: in;
+        background-color: red;
+    }
+
+
+    
+}
