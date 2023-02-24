@@ -164,6 +164,22 @@ body{
         grid-area: ac;
     }
 
+    #protein_section{
+        grid-area: pr;
+    }
+
+    #supplements_section{
+        grid-area: sp;
+    }
+
+    #training_clothes_section{
+        grid-area: tc;
+    }
+
+    #accessories_section{
+        grid-area: ac;
+    }
+
     .products_button{
         justify-content: center;
         align-content: center;
@@ -182,6 +198,11 @@ body{
         border: 1px solid black;
         margin-top: 10px;
       }
+
+    .show_products {
+        display: block;
+        height: 20vh;
+    }
 
     
 }

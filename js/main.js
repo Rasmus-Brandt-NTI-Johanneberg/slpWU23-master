@@ -10,6 +10,12 @@ function showMenu(){
 }
 
 
-document.querySelector(".products_button#protein").addEventListener("click", dropdownProducts)
+document.querySelector("#protein.products_button").addEventListener("click", dropdownProducts)
 
-function dropdownProducts()
+function dropdownProducts(){
+  let dropdown = document.querySelector(".products_section")
+  dropdown.classList.toggle(show_products)
+}
+  
+
+  //this.nextElementSibling.classlist.toggle
