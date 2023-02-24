@@ -51,6 +51,9 @@ body{
     top: 0;
     left: -26vw;
     transition: left 0.3s;
+    z-index: 3;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+
     }
 
     .show{
@@ -65,7 +68,7 @@ body{
         bottom: 0;
         background-color: rgba(0,0,0,0.5);
         display: none;
-        z-index: 5;
+        z-index: 2;
     }
     
     .fade_layer.visible{
@@ -84,6 +87,7 @@ body{
         height: 100vh;
         display: grid;
         grid-template-rows: 30vh 1fr;
+        margin: 0;
         grid-template-areas: 
         'hi'
         'in';
@@ -112,6 +116,52 @@ body{
         width: 85%;
         margin: 0;
         border-radius: 25%;
+    }
+
+    /* Shop Page CSS */
+
+    #shop_container{
+        min-height: 100vh;
+        height: fit-content;
+        display: grid;
+        grid-template-rows: 30vh 1fr;
+        grid-template-areas: 
+        'si'
+        'ss';
+        margin: 0;
+        padding-bottom: 5vh;
+        background-color: rgb(114, 114, 114);
+    }
+
+    #shop_image{
+        grid-area: si;
+        background-color: blueviolet;
+    }
+    .shop_section{
+        grid-area: ss;
+    }
+    #protein{
+        grid-area: pr;
+    }
+
+    #supplements{
+        grid-area: sp;
+    }
+
+    #training_clothes{
+        grid-area: tc;
+    }
+
+    #accessories{
+        grid-area: ac;
+    }
+
+    .products_button{
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        cursor: pointer;
+        display: inline;
     }
 
     
