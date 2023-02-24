@@ -8,3 +8,8 @@ function showMenu(){
   let layer = document.querySelector(".fade_layer")
   layer.classList.toggle("visible")
 }
+
+
+document.querySelector(".products_button#protein").addEventListener("click", dropdownProducts)
+
+function dropdownProducts()
