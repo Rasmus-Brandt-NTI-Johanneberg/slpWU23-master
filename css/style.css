@@ -121,7 +121,7 @@ body{
     /* Shop Page CSS */
 
     #shop_container{
-        min-height: 100vh;
+        min-height: 95vh;
         height: fit-content;
         display: grid;
         grid-template-rows: 30vh 1fr;
@@ -198,6 +198,79 @@ body{
         opacity: 100;
         position: relative
     }
+
+
+    /* Services Page CSS */
+
+    #services_container{
+        min-height: 95vh;
+        height: fit-content;
+        display: grid;
+        grid-template-rows: 15vh;
+        grid-template-areas: 
+        'st'
+        'sn';
+        margin: 0;
+        padding-top: 0;
+        padding: 2vh;
+        padding-bottom: 3vh;
+        background-color: rgb(114, 114, 114);
+    }
+
+    #services_top_desc{
+        display: flex;
+        background-color: whitesmoke;
+        grid-area: st;
+        border-bottom: 1px solid black;
+    }
+
+    #services_section{
+        display: flex;
+        background-color: blanchedalmond;
+        grid-area: sn;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }
+
+    .services_article{
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid black;
+        padding-bottom: 2vh;
+        margin-top: 2vh;
+    }
+      
+
+    .no_wrap{
+        flex-wrap: nowrap;
+    }
+
+    .services_article_text{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+
+    .services_article_text h1, p{
+        margin: 2px;
+        padding: 0;
+    }
+
+    .portrait_image{
+        width: 50%;
+        height: auto;
+    }
+
+    .landscape_image{
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
 
     
 }
