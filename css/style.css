@@ -290,5 +290,78 @@ body{
     }
 
 
-    
+    /* About Us CSS */
+
+    #about_us_container{
+        display: grid;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        grid-template-rows: 15vh 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 8.1vw 1fr;
+        grid-template-areas: 
+        'at at at'
+        'ot oi oi'
+        'ci ci ct'
+        'et ei ei'
+        'ji ji jt';
+    }
+
+    #about_us_title{
+        display: flex;
+        grid-area: at;
+    }
+
+    #our_gyms_title{
+        display: flex;
+        grid-area: ot;
+        background-color: cornflowerblue;
+    }
+
+    #our_gyms_images{
+        display: flex;
+        grid-area: oi;
+        background-color: darkgrey;
+    }
+
+    #contact_us_title{
+        display: flex;
+        grid-area: ct;
+        background-color: chartreuse;
+    }
+
+    #contact_us_images{
+        display: flex;
+        grid-area: ci;
+        background-color: black;
+    }
+
+    #employees_title{
+        display: flex;
+        grid-area: et;
+        background-color: #f14e4e;
+    }
+
+    #employees_images{
+        display: flex;
+        grid-area: ei;
+        background-color: blueviolet;
+    }
+
+    #jobs_title{
+        display: flex;
+        grid-area: jt;
+        background-color: green;
+    }
+
+    #jobs_images{
+        display: flex;
+        grid-area: ji;
+        background-color: aqua;
+    }
+
+
+
+
 }
