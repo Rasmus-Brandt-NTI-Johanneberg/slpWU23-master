@@ -12,12 +12,47 @@ body{
     background-color: green;
     position: fixed;
     z-index: 1;
-    height: 5vh;
+    height: 8vh;
     width: 100vw;
-    grid-template-columns: 10% 1fr;
+    grid-template-columns: 15% 1fr 5vw;
     grid-template-areas:
-    'nb hl';
+    'hl hn ni';
 }
+
+.header_nav{
+    grid-area: hn;
+    display: flex;
+    background-color: #f14e4e;
+    margin: 0;
+    padding-right: 35vw;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header_link_div{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_link_div a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 1;
+    color: black;
+
+    background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+}
+
+.header_nav a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+  }
 
 .menu_button{
     grid-area: nb;
@@ -25,16 +60,15 @@ body{
     align-items: center;
     margin: auto;
     cursor: pointer;
-    display: inline;
+    display: none;
 }
 
 .menu_button .material-icons{
     font-size: 2rem;
-
 }
 
 .menu{
-height: 100vh;
+height: 0;
 width: 25vw;
 background: hotpink;
 position: fixed;
@@ -70,12 +104,24 @@ box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     background-color: aquamarine;
 }
 
+.nav_icons{
+    grid-area: ni;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 1vw;
+}
+
+.icon_div{
+    width: 5%;
+}
+
 
 
 /* Home Page CSS */
 
 #home_container{
-    height: auto;
+    height: 100vh;
     margin: 0;
 }
 
