@@ -223,7 +223,7 @@ body{
     grid-area: ac;
 }
 
-.products_button{
+.products_button {
     justify-content: center;
     align-content: center;
     margin: 0;
@@ -234,11 +234,13 @@ body{
     height: 10vh;
     margin-top: 5vh;
     transition: width 0.8s ease-in-out;
-}
-
-.products_button.wide{
+    transition-delay: 0.8s;
+  }
+  
+  .products_button.wide {
     width: 80vw;
-}
+    transition-delay: 0s;
+  }  
 
 .products_section {
     display: inline-flex;
@@ -248,7 +250,24 @@ body{
     align-content: center;
     justify-content: center;
     width: 33vw;
-    animation: show_section 0.8s ease-in-out forwards;
+    animation: none;
+  }
+  
+  .show_products {
+    display: inline-flex;
+    height: 40vh;
+    border: 1px solid black;
+    opacity: 100;
+    position: relative;
+    width: 80vw;
+  }
+  
+  .show_products.animation {
+    animation: show_section 1.6s ease-in-out forwards;
+  }
+  
+  .show_products.animation-reverse {
+    animation: hide_section 1.6s ease-in-out forwards;
   }
   
   @keyframes show_section {
@@ -260,25 +279,37 @@ body{
     }
     50% {
       width: 80vw;
-      opacity: 100;
+      opacity: 0;
       border: 1px solid black;
       height: 0;
     }
     100% {
-      height: 20vh;
+      width: 80vw;
+      opacity: 1;
+      border: 1px solid black;
+      height: 40vh;
     }
   }
   
-
-.show_products {
-    display: inline-flex;
-    height: 20vh;
-    border: 1px solid black;
-    opacity: 100;
-    position: relative;
-    width: 80vw;
-}
-
+  @keyframes hide_section {
+    0% {
+      height: 40vh;
+      width: 80vw;
+      opacity: 1;
+      border: 1px solid black;
+    }
+    50% {
+        width: 80vw;
+        opacity: 0.5;
+        border: 1px solid black;
+    }
+    100% {
+        height: 0;
+        width: 80vw;
+        opacity: 0;
+        border: 0;
+    }
+  }
 
 @media screen and (max-width: 600px) {
 
@@ -452,22 +483,24 @@ body{
         grid-area: ac;
     }
     
-    .products_button{
+    .products_button {
         justify-content: center;
         align-content: center;
         margin: 0;
         cursor: pointer;
         display: flex;
         background-color: white;
-        width: 66vw;
-        height: 10vh;
-        margin-top: 3vh;
+        width: 60vw;
+        height: 7vh;
+        margin-top: 5vh;
         transition: width 0.8s ease-in-out;
-    }
-    
-    .products_button.wide{
+        transition-delay: 0.8s;
+      }
+      
+      .products_button.wide {
         width: 90vw;
-    }
+        transition-delay: 0s;
+      }  
     
     .products_section {
         display: inline-flex;
@@ -476,18 +509,66 @@ body{
         border: 0px solid black;
         align-content: center;
         justify-content: center;
-        width: 66vw;    
-        transition: height 0.8s ease-in-out, border 0.8s ease-in-out, opacity 0.8s ease-in-out, width 0.8s ease-in-out;
+        width: 33vw;
+        animation: none;
       }
-    
-    .show_products {
+      
+      .show_products {
         display: inline-flex;
-        height: 20vh;
+        height: 40vh;
         border: 1px solid black;
         opacity: 100;
         position: relative;
-        width: 90vw;
-    }
+        width: 80vw;
+      }
+      
+      .show_products.animation {
+        animation: show_section 1.6s ease-in-out forwards;
+      }
+      
+      .show_products.animation-reverse {
+        animation: hide_section 1.6s ease-in-out forwards;
+      }
+      
+      @keyframes show_section {
+        0% {
+          width: 33vw;
+          opacity: 0;
+          border: 0;
+          height: 0;
+        }
+        50% {
+          width: 90vw;
+          opacity: 0;
+          border: 1px solid black;
+          height: 0;
+        }
+        100% {
+          width: 90vw;
+          opacity: 1;
+          border: 1px solid black;
+          height: 40vh;
+        }
+      }
+      
+      @keyframes hide_section {
+        0% {
+          height: 40vh;
+          width: 90vw;
+          opacity: 1;
+          border: 1px solid black;
+        }
+        50% {
+            opacity: 0.5;
+            border: 1px solid black;
+        }
+        100% {
+            height: 0;
+            width: 90vw;
+            opacity: 0;
+            border: 0;
+        }
+      }
 
 
     /* Services Page CSS */

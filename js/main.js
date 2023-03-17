@@ -13,7 +13,7 @@ function showMenu() {
 
 
 
-// Shop sections
+// Shop section
 const productButtons = document.querySelectorAll('.products_button');
 
 productButtons.forEach(button => {
@@ -24,8 +24,21 @@ productButtons.forEach(button => {
 
 function dropdownProducts(button){
   const productSection = button.nextElementSibling;
+  const isShowing = productSection.classList.contains("show_products");
+
+  if (!isShowing) {
+    productSection.style.animation = "show_section 1.6s ease-in-out forwards";
+  }
+
   productSection.classList.toggle("show_products");
+
   button.classList.toggle("wide", productSection.classList.contains("show_products"));
-  button.classList.toggle("reverse", !button.classList.contains("wide"));
+
+  if (isShowing) {
+    productSection.style.animation = "hide_section 0.8s ease-in-out forwards";
+    productSection.addEventListener("animationend", () => {
+      productSection.style.animation = "none";
+    }, { once: true });
+  }
 }
 
