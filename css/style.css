@@ -1,13 +1,19 @@
 /* General CSS */
 
+::-webkit-scrollbar {
+    width: 0;
+  }
+
 body{
     height: auto;
     margin: 0;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
 }
 
 .header_universal{
     display: grid;
-    background-color: green;
+    background-color: transparent;
     position: fixed;
     z-index: 1;
     height: 8vh;
@@ -15,12 +21,26 @@ body{
     grid-template-columns: 15% 1fr 5vw;
     grid-template-areas:
     'hl hn ni';
+    transition: background-color 0.5s ease;
 }
+
+.header_universal--transparent {
+    background-color: green;
+  }
+
+.header_universal--transparent .nav_link{
+    color: black;
+}
+
+.header_universal--transparent .icon_div {
+    color: black;
+  }
+  
+  
 
 .header_nav{
     grid-area: hn;
     display: flex;
-    background-color: #f14e4e;
     margin: 0;
     padding-right: 35vw;
     align-items: center;
@@ -36,18 +56,17 @@ body{
     align-items: center;
 }
 
-.header_link_div a{
+.nav_link {
     font-size: 1.5rem;
     text-decoration: none;
     line-height: 1;
-    color: black;
-
+    color: white;
     background: linear-gradient(0deg, slateblue, slateblue) no-repeat right bottom / 0 var(--bg-h);
-    transition: background-size 350ms;
+    transition: background-size 350ms, color 0.5s;
     --bg-h: 100%;
-}
-
-.header_nav a:where(:hover, :focus-visible) {
+  }
+  
+  .nav_link:where(:hover, :focus-visible) {
     background-size: 100% var(--bg-h);
     background-position-x: left;
   }
@@ -107,6 +126,8 @@ body{
     justify-content: space-around;
     align-items: center;
     padding-right: 1vw;
+    color: white;
+    transition: color 0.2s;
 }
 
 .icon_div{

@@ -11,6 +11,29 @@ function showMenu() {
   layer.classList.toggle("visible")
 }
 
+// Header Universal
+const header = document.querySelector('.header_universal');
+const navText = document.querySelectorAll('.nav_link');
+const icons = document.querySelector('.nav_icons');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset <= 20) {
+    header.classList.remove('header_universal--transparent');
+    navText.forEach((element) => {
+      element.classList.remove('header_white_text');
+    });
+    icons.classList.remove('header_white_text');
+  } else {
+    header.classList.add('header_universal--transparent');
+    navText.forEach((element) => {
+      element.classList.add('header_white_text');
+    });
+    icons.classList.add('header_white_text');
+  }
+});
+
+
+
 
 
 // Shop section
