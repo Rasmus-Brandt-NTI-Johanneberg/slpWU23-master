@@ -377,13 +377,33 @@ body{
     'pi pt';
 }
 
-#vertical_service_section{
+#vertical_service_section {
     display: grid;
     grid-area: vs;
+    border-radius: 5%;
     margin: 0;
     padding: 0;
+    row-gap: 1vh;
     background-color: orange;
-}
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'mi mi mt'
+      'gt gi gi';
+    position: relative;
+  }
+  
+  #vertical_service_section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+  }
+  
 
 #personal_trainer_image{
     grid-area: pi;
@@ -391,7 +411,7 @@ body{
     background-image: url(/img/services/Personal_Traning.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    border-right: 1px solid black;
+    border: 1px solid black;
 }
 
 #personal_trainer_text{
@@ -401,6 +421,41 @@ body{
     justify-content: center;
     align-items: center;
     margin-left: 5%;
+}
+
+#membership_image{
+    grid-area: mi;
+    background-image: url(/img/services/Membership.jpg);
+    background-size: contain;
+    border-radius: 5% 0 0 0;
+}
+
+#membership_text{
+    display: flex;
+    border-radius: 0 5% 0 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vw;
+}
+
+#group_image{
+    grid-area: gi;
+    background-image: url(/img/services/Group_Training.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 1%;
+    border-radius: 0 0 5% 0;
+}
+
+#group_text{
+    display: flex;
+    grid-area: gt;
+    border-radius: 0 0 0 5%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vw;
 }
 
 #services_top_desc_pc{
