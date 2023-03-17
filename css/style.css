@@ -237,21 +237,7 @@ body{
 }
 
 .products_button.wide{
-    animation: wide 0.8s ease-in-out both;
-}
-
-.products_button.reverse{
-    animation: reverse 0.8s ease-in-out both;
-}
-
-@keyframes wide{
-    0% {width: 33vw;}
-    100% {width: 80vw;}
-}
-
-@keyframes reverse{
-    0% {width: 80vw;}
-    100% {width: 33vw;}
+    width: 80vw;
 }
 
 .products_section {
@@ -261,9 +247,28 @@ body{
     border: 0px solid black;
     align-content: center;
     justify-content: center;
-    width: 33vw;    
-    transition: width 0.8s ease-in-out, border 0.8s ease-in-out, opacity 0.8s ease-in-out, height 0.8s ease-in-out ;
+    width: 33vw;
+    animation: show_section 0.8s ease-in-out forwards;
   }
+  
+  @keyframes show_section {
+    0% {
+      width: 33vw;
+      opacity: 0;
+      border: 0;
+      height: 0;
+    }
+    50% {
+      width: 80vw;
+      opacity: 100;
+      border: 1px solid black;
+      height: 0;
+    }
+    100% {
+      height: 20vh;
+    }
+  }
+  
 
 .show_products {
     display: inline-flex;
