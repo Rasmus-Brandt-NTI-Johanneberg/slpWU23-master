@@ -18,13 +18,14 @@ const productButtons = document.querySelectorAll('.products_button');
 
 productButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const productSection = button.nextElementSibling;
-    dropdownProducts(button, productSection);
+    dropdownProducts(button);
   });
 });
 
-function dropdownProducts(button, productSection){
+function dropdownProducts(button){
+  const productSection = button.nextElementSibling;
   productSection.classList.toggle("show_products");
   button.classList.toggle("wide", productSection.classList.contains("show_products"));
+  button.classList.toggle("reverse", !button.classList.contains("wide"));
 }
 

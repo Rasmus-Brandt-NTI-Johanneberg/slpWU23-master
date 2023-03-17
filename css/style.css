@@ -188,31 +188,22 @@ body{
     background-color: blueviolet;   
 }
 
-
-
 .shop_section{
     grid-area: ss;
     display: flex;
     margin: 0;
     align-content: center;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    
+    width: 100%;
 }
 
-#protein_button{
-    display: flex;
-}
-
-#supplements_button{
-    display: flex;
-}
-
-#training_clothes_button{
-    display: flex;
-}
-
-#accessories_button{
+#protein_button,
+#supplements_button,
+#training_clothes_button,
+#accessories_button {
     display: flex;
 }
 
@@ -246,7 +237,21 @@ body{
 }
 
 .products_button.wide{
-    width: 66vw;
+    animation: wide 0.8s ease-in-out both;
+}
+
+.products_button.reverse{
+    animation: reverse 0.8s ease-in-out both;
+}
+
+@keyframes wide{
+    0% {width: 33vw;}
+    100% {width: 80vw;}
+}
+
+@keyframes reverse{
+    0% {width: 80vw;}
+    100% {width: 33vw;}
 }
 
 .products_section {
@@ -254,9 +259,10 @@ body{
     opacity: 0;
     height: 0;
     border: 0px solid black;
-    transition: height 0.8s ease-in-out, border 0.8s ease-in-out, opacity 0.8s ease-in-out, width 0.8s ease-in-out;
     align-content: center;
     justify-content: center;
+    width: 33vw;    
+    transition: width 0.8s ease-in-out, border 0.8s ease-in-out, opacity 0.8s ease-in-out, height 0.8s ease-in-out ;
   }
 
 .show_products {
@@ -265,6 +271,7 @@ body{
     border: 1px solid black;
     opacity: 100;
     position: relative;
+    width: 80vw;
 }
 
 
@@ -399,39 +406,47 @@ body{
         padding-bottom: 5vh;
         background-color: rgb(114, 114, 114);
     }
-
+    
     #shop_image{
         grid-area: si;
-        background-color: blueviolet;
+        background-color: blueviolet;   
     }
-
+    
     .shop_section{
         grid-area: ss;
         display: flex;
         margin: 0;
-        padding-top: 1vh;
         align-content: center;
+        align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
         flex-direction: column;
-        
+        width: 100%;
     }
-
+    
+    #protein_button,
+    #supplements_button,
+    #training_clothes_button,
+    #accessories_button {
+        display: flex;
+    }
+    
     .protein_section{
         grid-area: pr;
     }
-
+    
     .supplements_section{
         grid-area: sp;
     }
-
+    
     .training_clothes_section{
         grid-area: tc;
     }
-
+    
     .accessories_section{
         grid-area: ac;
     }
-
+    
     .products_button{
         justify-content: center;
         align-content: center;
@@ -439,32 +454,34 @@ body{
         cursor: pointer;
         display: flex;
         background-color: white;
-        width: 90vw;
-        height: 5vh;
-        margin-top: 5vh;
+        width: 66vw;
+        height: 10vh;
+        margin-top: 3vh;
+        transition: width 0.8s ease-in-out;
     }
-
+    
+    .products_button.wide{
+        width: 90vw;
+    }
+    
     .products_section {
         display: inline-flex;
         opacity: 0;
         height: 0;
         border: 0px solid black;
-        transition: height 0.8s ease-in-out, border 0.8s ease-in-out, opacity 0.8s ease-in-out;
         align-content: center;
         justify-content: center;
+        width: 66vw;    
+        transition: height 0.8s ease-in-out, border 0.8s ease-in-out, opacity 0.8s ease-in-out, width 0.8s ease-in-out;
       }
-
-    .products_section #protein_section h1{
-        transition: opacity 10s ease-in-out;
-        opacity: 100;
-    }
-
+    
     .show_products {
         display: inline-flex;
         height: 20vh;
         border: 1px solid black;
         opacity: 100;
-        position: relative
+        position: relative;
+        width: 90vw;
     }
 
 
