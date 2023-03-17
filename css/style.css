@@ -168,6 +168,106 @@ body{
 }
 
 
+/* Shop Page CSS */
+
+#shop_container{
+    min-height: 95vh;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 30vh 1fr;
+    grid-template-areas: 
+    'si'
+    'ss';
+    margin: 0;
+    padding-bottom: 5vh;
+    background-color: rgb(114, 114, 114);
+}
+
+#shop_image{
+    grid-area: si;
+    background-color: blueviolet;   
+}
+
+
+
+.shop_section{
+    grid-area: ss;
+    display: flex;
+    margin: 0;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+#protein_button{
+    display: flex;
+}
+
+#supplements_button{
+    display: flex;
+}
+
+#training_clothes_button{
+    display: flex;
+}
+
+#accessories_button{
+    display: flex;
+}
+
+.protein_section{
+    grid-area: pr;
+}
+
+.supplements_section{
+    grid-area: sp;
+}
+
+.training_clothes_section{
+    grid-area: tc;
+}
+
+.accessories_section{
+    grid-area: ac;
+}
+
+.products_button{
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    background-color: white;
+    width: 33vw;
+    height: 10vh;
+    margin-top: 5vh;
+    transition: width 0.8s ease-in-out;
+}
+
+.products_button.wide{
+    width: 66vw;
+}
+
+.products_section {
+    display: inline-flex;
+    opacity: 0;
+    height: 0;
+    border: 0px solid black;
+    transition: height 0.8s ease-in-out, border 0.8s ease-in-out, opacity 0.8s ease-in-out, width 0.8s ease-in-out;
+    align-content: center;
+    justify-content: center;
+  }
+
+.show_products {
+    display: inline-flex;
+    height: 20vh;
+    border: 1px solid black;
+    opacity: 100;
+    position: relative;
+}
+
+
 @media screen and (max-width: 600px) {
 
     /* General CSS*/
@@ -309,25 +409,26 @@ body{
         grid-area: ss;
         display: flex;
         margin: 0;
-        padding-top: 10px;
+        padding-top: 1vh;
         align-content: center;
         flex-wrap: wrap;
         flex-direction: column;
         
     }
-    .protein{
+
+    .protein_section{
         grid-area: pr;
     }
 
-    .supplements{
+    .supplements_section{
         grid-area: sp;
     }
 
-    .training_clothes{
+    .training_clothes_section{
         grid-area: tc;
     }
 
-    .accessories{
+    .accessories_section{
         grid-area: ac;
     }
 
@@ -340,7 +441,7 @@ body{
         background-color: white;
         width: 90vw;
         height: 5vh;
-        margin-top: 50px;
+        margin-top: 5vh;
     }
 
     .products_section {
