@@ -5,8 +5,6 @@ body{
     margin: 0;
 }
 
-/* General CSS*/
-
 .header_universal{
     display: grid;
     background-color: green;
@@ -68,16 +66,15 @@ body{
 }
 
 .menu{
-height: 0;
-width: 25vw;
-background: hotpink;
-position: fixed;
-top: 0;
-left: -26vw;
-transition: left 0.3s;
-z-index: 3;
-box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-
+    height: 0;
+    width: 25vw;
+    background: hotpink;
+    position: fixed;
+    top: 0;
+    left: -26vw;
+    transition: left 0.3s;
+    z-index: 3;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
 }
 
 .show{
@@ -116,16 +113,59 @@ box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     width: 5%;
 }
 
+.icon_div:hover{
+    cursor: pointer;
+}
+
 
 
 /* Home Page CSS */
 
 #home_container{
-    height: 100vh;
+    height: 92vh;
     margin: 0;
+    padding-top: 8vh;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 50%), url('/img/services/Group_Training.jpg');
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 1fr;
+    grid-template-areas: 
+    'ht hi'
+    'in hi';
 }
 
+#home_image{
+    width: 100%;
+    height: 100%;
+    grid-area: hi;
+}
 
+#home_title{
+    display: flex;
+    grid-area: ht;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 5vw;
+    top: 2vh;
+}
+
+#home_info{
+    grid-area: in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home_info_box{
+    background-color: rgb(121, 117, 117);
+    height: 18%;
+    width: 85%;
+    margin: 0;
+    border-radius: 25%;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -142,6 +182,18 @@ box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
         grid-template-columns: 10% 1fr;
         grid-template-areas:
         'nb hl';
+    }
+
+    .header_link_div{
+        display: none;
+    }
+
+    .nav_icons{
+        display: none;
+    }
+
+    .header_nav{
+        display: none;
     }
 
     .menu_button{
