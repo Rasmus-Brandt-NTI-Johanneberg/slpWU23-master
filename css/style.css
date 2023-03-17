@@ -1,3 +1,5 @@
+/* Different Texts */
+
 /* General CSS */
 
 ::-webkit-scrollbar {
@@ -35,8 +37,6 @@ body{
 .header_universal--transparent .icon_div {
     color: black;
   }
-  
-  
 
 .header_nav{
     grid-area: hn;
@@ -350,13 +350,13 @@ body{
 }
 
 #services_container_pc{
-    height: 100vh;
+    height: auto;
     display: grid;
     margin: 0;
     grid-template-columns: 1fr 1fr;
     column-gap: 2vw;
     row-gap: 3vh;
-    grid-template-rows: 15vh 1fr;
+    grid-template-rows: 15vh 85vh;
     grid-template-areas: 
     'sd sd'
     'hs vs';
@@ -368,10 +368,11 @@ body{
 #horizontal_service_section{
     display: grid;
     grid-area: hs;
+    border-radius: 5%;
     margin: 0;
     padding: 0;
     background-color: #f14e4e;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60% 40%;
     grid-template-areas: 
     'pi pt';
 }
@@ -386,7 +387,11 @@ body{
 
 #personal_trainer_image{
     grid-area: pi;
-    height: 100%;
+    border-radius: 5% 0 0 5%;
+    background-image: url(/img/services/Personal_Traning.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-right: 1px solid black;
 }
 
 #personal_trainer_text{
@@ -459,7 +464,7 @@ body{
 
 .portrait_image{
     width: auto;
-    height: 100px;
+    height: 100%;
     display: block;
 }
 
