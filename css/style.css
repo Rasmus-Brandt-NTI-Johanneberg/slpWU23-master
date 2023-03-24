@@ -1,4 +1,15 @@
 /* Different Texts */
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Raleway:ital@1&display=swap');
+
+h1{
+    font-family: 'Abhaya Libre', serif;
+    font-size: 4rem;
+}
+
+h2{
+    font-family: 'Abhaya Libre', serif;
+    font-size: 2rem;
+}
 
 /* General CSS */
 
@@ -27,7 +38,7 @@ body{
 }
 
 .header_universal--transparent {
-    background-color: green;
+    background-color: rgb(114, 114, 114);
   }
 
 .header_universal--transparent .nav_link{
@@ -185,7 +196,7 @@ body{
     justify-content: space-evenly;
 }
 
-.home_info_box{
+.home_info_box {
     background-color: rgb(121, 117, 117);
     height: 16%;
     width: 65%;
@@ -196,7 +207,36 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s;
 }
+
+.home_info_box::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #f14e4e;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.home_info_box:hover::before{
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #f14e4e;
+}
+  
+.home_info_box:hover{
+    color: #f14e4e;
+    box-shadow: 0 0 10px #f14e4e;
+    text-shadow: 0 0 5px #f14e4e;
+}
+
+
+
 
 
 /* Shop Page CSS */
@@ -216,7 +256,14 @@ body{
 
 #shop_image{
     grid-area: si;
-    background-color: blueviolet;   
+    background-color: blueviolet; 
+    display: flex;
+    justify-content: center;
+    align-items: end; 
+}
+
+#shop_image img{
+    height: 50%;
 }
 
 .shop_section{
