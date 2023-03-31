@@ -721,6 +721,11 @@ body{
     flex-basis: 26%;
 }
 
+.employee_article img{
+    width: 50%;
+    height: auto;
+}
+
 #jobs_title{
     display: flex;
     grid-area: jt;
