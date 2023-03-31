@@ -590,14 +590,20 @@ body{
     width: 100vw;
     margin: 0;
     padding: 0;
-    height: 220vh;
-    grid-template-rows:1fr 1fr 1fr 1fr;
+    min-height: 220vh;
+    grid-template-rows:25% 25% 25% 25%;
     grid-template-columns: 1fr 8.1vw 1fr;
     grid-template-areas: 
     'ot oi oi'
     'ci ci ct'
     'et ei ei'
     'ji ji jt';
+}
+
+#about_us_container h2{
+    font-size: 6rem;
+    text-align: center;
+    flex: 1;
 }
 
 .shadow_top{
@@ -618,9 +624,17 @@ body{
 }
 
 #our_gyms_images{
-    display: flex;
+    display: grid;
     grid-area: oi;
     background-color: darkgrey;
+    padding: 5vw;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'gm gg'
+    'gs gb';
 }
 
 #contact_us_title{
@@ -659,6 +673,31 @@ body{
     background-color: aqua;
 }
 
+#gym_malmo{
+    grid-area: gm;
+    margin-bottom: 2vh;
+}
+
+#gym_gothenburg{
+    grid-area: gg;
+}
+
+#gym_stockholm{
+    grid-area: gs;
+}
+
+#gym_boras{
+    grid-area: gb;
+}
+
+.gym_location_images{
+    width: 25%;
+}
+
+#our_gyms_images h3{
+    text-align: center;
+    font-size: 0.5rem;
+}
 
 
 
@@ -974,7 +1013,6 @@ body{
         padding-bottom: 2vh;
         margin-top: 2vh;
     }
-
       
       .services_button {
         width: fit-content;
