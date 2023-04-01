@@ -693,6 +693,7 @@ body{
     font-size: 1.5rem;
     margin: 1%;
 }
+
 #contact_us_title{
     display: flex;
     grid-area: ct;
@@ -768,6 +769,23 @@ body{
     background-color: aqua;
 }
 
+.jobs_article{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jobs_article h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1%;
+}
+
+.services_button{
+    font-size: 1rem;
+}
 
 
 
