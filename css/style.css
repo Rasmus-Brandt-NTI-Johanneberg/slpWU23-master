@@ -144,12 +144,17 @@ body {
 
 .header_logo {
     grid-area: hl;
-    background-image: url(/img/general/logo.png);
+    background-image: url(/img/general/LogoWhite.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 2%;
     margin-bottom: 2%;
+    transition: background-image 0.3s;
+}
+
+.header_universal--transparent .header_logo {
+    background-image: url(/img/general/LogoBlack.png);
 }
 
 .nav_icons {
@@ -266,6 +271,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: end;
+    padding-bottom: 2vh;
 }
 
 #shop_image img {
@@ -409,18 +415,7 @@ body {
 
 /* Services CSS */
 #services_container_mobile {
-    min-height: 95vh;
-    height: fit-content;
     display: none;
-    grid-template-rows: 15vh 75vh;
-    grid-template-areas:
-        'st'
-        'sn';
-    margin: 0;
-    padding: 2vh;
-    padding-top: 0;
-    padding-bottom: 3vh;
-    background-color: rgb(114, 114, 114);
 }
 
 #services_container_pc {
@@ -470,7 +465,7 @@ body {
     grid-area: pi;
     border-radius: 5% 0 0 5%;
     background-image: url(/img/services/Personal_Traning.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -486,7 +481,8 @@ body {
 #membership_image {
     grid-area: mi;
     background-image: url(/img/services/Membership.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 5% 0 0 0;
 }
 
@@ -680,6 +676,10 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 1vh;
+}
+
+#mobile_gym_locations{
+    display: none;
 }
 
 #our_gyms_images h3 {
@@ -1171,8 +1171,8 @@ body {
     }
 
     .portrait_image {
-        width: auto;
-        height: 100%;
+        width: 50%;
+        height: auto;
     }
 
     .landscape_image {
@@ -1233,7 +1233,12 @@ body {
         margin: 0;
         padding: 0;
     }
-        
+
+    #mobile_gym_locations{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     #contact_us_title {
         display: flex;
