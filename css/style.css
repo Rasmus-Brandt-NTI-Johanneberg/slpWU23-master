@@ -347,6 +347,7 @@ body {
     display: inline-flex;
     opacity: 0;
     height: 0;
+    max-height: fit-content;
     border: 0px solid #303030;
     align-content: space-around;
     justify-content: space-between;
@@ -355,6 +356,7 @@ body {
     overflow-y: hidden;
     flex-wrap: wrap;
     gap: 1vw;
+    padding-bottom: 2vh;
 }
 
 .show_products {
@@ -364,14 +366,6 @@ body {
     opacity: 1;
     position: relative;
     width: 80vw;
-}
-
-.show_products.animation {
-    animation: show_section 1.6s ease-in-out forwards;
-}
-
-.show_products.animation-reverse {
-    animation: hide_section 1.6s ease-in-out forwards;
 }
 
 @keyframes show_section {
@@ -391,14 +385,14 @@ body {
 
     75% {
         opacity: 0.5;
-        max-height: calc(10vh + 0.5 * (100vh - 10vh));
+        max-height: 50vh;
     }
 
     100% {
         width: 80vw;
         opacity: 1;
         border: 1px solid #303030;
-        max-height: 300vh;
+        max-height: 150vh;
         height: fit-content;
     }
 }
@@ -406,15 +400,19 @@ body {
 @keyframes hide_section {
     0% {
         height: fit-content;
-        max-height: 300vh;
+        max-height: 150vh;
         width: 80vw;
         opacity: 1;
         border: 1px solid #303030;
     }
+
+    25%{
+        opacity: 0.5;
+        max-height: 50vh;
+    }
     
     50% {
-        height: calc(10vh + 0.5 * (100vh - 10vh));
-        max-height: calc(10vh + 0.5 * (100vh - 10vh));
+        max-height: 0;
         width: 80vw;
         border: 1px solid #303030;
     }
@@ -437,6 +435,10 @@ body {
     flex-basis: 25%;
 }
 
+.shop_item:hover{
+    cursor: pointer;
+}
+
 .shop_item img{
     width: 100%;
 }
@@ -449,6 +451,7 @@ body {
 
 .shop_item p{
     text-align: center;
+    font-size: 1.2rem;
 }
 
 
@@ -676,30 +679,30 @@ body {
 
 #gym_malmo {
     grid-area: gm;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #303030;
+    border-left: 1px solid #303030;
+    border-bottom: 1px solid #303030;
 }
 
 #gym_gothenburg {
     grid-area: gg;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right: 1px solid #303030;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
 }
 
 #gym_stockholm {
     grid-area: gs;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-left: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+    border-top: 1px solid #303030;
 }
 
 #gym_boras {
     grid-area: gb;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-right: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+    border-top: 1px solid #303030;
 }
 
 .gym_location_images {
@@ -1057,28 +1060,21 @@ body {
         display: inline-flex;
         opacity: 0;
         height: 0;
-        border: 0px solid black;
+        border: 0px solid #303030;
         align-content: space-between;
         width: 33vw;
         animation: none;
         justify-content: space-between;
+        padding-bottom: 0;
     }
 
     .show_products {
         display: inline-flex;
         height: 40vh;
-        border: 1px solid black;
+        border: 1px solid #303030;
         opacity: 1;
         position: relative;
         width: 80vw;
-    }
-
-    .show_products.animation {
-        animation: show_section 1.6s ease-in-out forwards;
-    }
-
-    .show_products.animation-reverse {
-        animation: hide_section 1.6s ease-in-out forwards;
     }
 
     @keyframes show_section {
@@ -1098,14 +1094,14 @@ body {
     
         75% {
             opacity: 0.5;
-            max-height: calc(10vh + 0.5 * (100vh - 10vh));
+            max-height: 50vh;
         }
-    
+
         100% {
             width: 80vw;
             opacity: 1;
             border: 1px solid #303030;
-            max-height: 300vh;
+            max-height: 150vh;
             height: fit-content;
         }
     }
@@ -1113,15 +1109,19 @@ body {
     @keyframes hide_section {
         0% {
             height: fit-content;
-            max-height: 300vh;
+            max-height: 150vh;
             width: 80vw;
             opacity: 1;
             border: 1px solid #303030;
         }
+    
+        25%{
+            opacity: 0.5;
+            max-height: 50vh;
+        }
         
         50% {
-            height: calc(10vh + 0.5 * (100vh - 10vh));
-            max-height: calc(10vh + 0.5 * (100vh - 10vh));
+            max-height: 0;
             width: 80vw;
             border: 1px solid #303030;
         }
@@ -1195,7 +1195,7 @@ body {
         height: fit-content;
         display: flex;
         flex-wrap: wrap;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #303030;
         padding-bottom: 2vh;
         margin-top: 2vh;
         justify-content: center;
@@ -1325,9 +1325,10 @@ body {
     .contact_us_article {
         display: flex;
         flex: 1;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: row;
+        padding-left: 5vw;
     }
 
     .contact_us_article h3 {

@@ -24,8 +24,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-
 // Shop section
 const productButtons = document.querySelectorAll('.products_button');
 
@@ -48,7 +46,7 @@ function dropdownProducts(button) {
     button.classList.toggle("wide", productSection.classList.contains("show_products"));
 
     if (isShowing) {
-        productSection.style.animation = "hide_section 0.8s ease-in-out forwards";
+        productSection.style.animation = "hide_section 1.6s ease-in-out forwards";
         productSection.addEventListener("animationend", () => {
             productSection.style.animation = "none";
         }, {
