@@ -411,11 +411,11 @@ body {
         opacity: 1;
         border: 1px solid #303030;
     }
-
+    
     50% {
-        max-height: 0;
+        height: calc(10vh + 0.5 * (100vh - 10vh));
+        max-height: calc(10vh + 0.5 * (100vh - 10vh));
         width: 80vw;
-        opacity: 0.5;
         border: 1px solid #303030;
     }
 
@@ -432,7 +432,6 @@ body {
 .shop_item{
     display: flex;
     flex-direction: column;
-    width: 1vw;
     height: 25vw;
     background-color: #D5D1C8;
     flex-basis: 25%;
@@ -1050,7 +1049,7 @@ body {
     }
 
     .products_button.wide {
-        width: 90vw;
+        width: 80vw;
         transition-delay: 0s;
     }
 
@@ -1059,10 +1058,10 @@ body {
         opacity: 0;
         height: 0;
         border: 0px solid black;
-        align-content: center;
-        justify-content: center;
+        align-content: space-between;
         width: 33vw;
         animation: none;
+        justify-content: space-between;
     }
 
     .show_products {
@@ -1087,43 +1086,72 @@ body {
             width: 33vw;
             opacity: 0;
             border: 0;
-            height: 0;
+            max-height: 0;
         }
-
+    
         50% {
-            width: 90vw;
+            width: 80vw;
             opacity: 0;
-            border: 1px solid black;
-            height: 0;
+            border: 1px solid #303030;
+            max-height: 0;
         }
-
+    
+        75% {
+            opacity: 0.5;
+            max-height: calc(10vh + 0.5 * (100vh - 10vh));
+        }
+    
         100% {
-            width: 90vw;
+            width: 80vw;
             opacity: 1;
-            border: 1px solid black;
-            height: 40vh;
+            border: 1px solid #303030;
+            max-height: 300vh;
+            height: fit-content;
         }
     }
-
+    
     @keyframes hide_section {
         0% {
-            height: 40vh;
-            width: 90vw;
+            height: fit-content;
+            max-height: 300vh;
+            width: 80vw;
             opacity: 1;
-            border: 1px solid black;
+            border: 1px solid #303030;
         }
-
+        
         50% {
-            opacity: 0.5;
-            border: 1px solid black;
+            height: calc(10vh + 0.5 * (100vh - 10vh));
+            max-height: calc(10vh + 0.5 * (100vh - 10vh));
+            width: 80vw;
+            border: 1px solid #303030;
         }
-
+    
         100% {
             height: 0;
-            width: 90vw;
+            max-height: 0;
+            width: 80vw;
             opacity: 0;
             border: 0;
         }
+    }
+    
+
+    .shop_item{
+        height: 25vh;
+    }
+
+    .shop_item img{
+        width: 100%;
+    }
+    
+    .shop_item h3{
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+    }
+    
+    .shop_item p{
+        text-align: center;
     }
 
 
