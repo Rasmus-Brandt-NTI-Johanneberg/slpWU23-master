@@ -178,6 +178,8 @@ body{
     margin: 0;
     padding-top: 8vh;
     background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 50%), url('/img/general/Homepage.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 1fr;
@@ -185,6 +187,15 @@ body{
     'ht hi'
     'in hi';
 }
+
+@media only screen and (min-width: 2000px) {
+    #home_container {
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 50%), url('/img/general/HomepageLarge.jpg');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+  }
+  
 
 #home_image{
     width: 100%;
