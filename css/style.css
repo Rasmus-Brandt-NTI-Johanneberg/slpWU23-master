@@ -212,10 +212,12 @@ body{
     position: relative;
     right: 5vw;
     top: 2vh;
+    background-color: none;
 }
 
 #home_title h1{
     color: #DFB960;
+    text-align: center;
 }
 
 #home_info{
@@ -785,7 +787,7 @@ body{
 
     .header_universal{
         display: grid;
-        background-color: green;
+        background-color: #D5D1C8;
         position: fixed;
         z-index: 1;
         height: 5vh;
@@ -822,20 +824,37 @@ body{
     }
 
     .menu{
-    height: 100vh;
-    width: 25vw;
-    background: hotpink;
+    display: flex;
+    flex-direction: column;
+    height: 33vh;
+    width: 100vw;
+    background: #303030;
     position: fixed;
-    top: 0;
-    left: -26vw;
-    transition: left 0.3s;
+    top: -34vh;
+    left: 0;
+    transition: top 0.3s;
     z-index: 3;
+    align-items: center;
+    justify-content: space-evenly;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    flex: 1;
+    }
 
+    .menu a{
+        color: #DFB960;
+        text-decoration: none;
+        font-size: 1.5rem;
     }
 
     .show{
-        left: 0;
+        top: 0;
+    }
+
+    .menu_div_button{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex: 1;
     }
 
     .fade_layer{
@@ -855,7 +874,10 @@ body{
 
     .header_logo{
         grid-area: hl;
-        background-color: aquamarine;
+        justify-content: space-around;
+        align-content: center;
+        right: 5vw;
+        position: relative;
     }
 
     
@@ -870,23 +892,28 @@ body{
         padding: 0;
         margin: 0;
         grid-template-areas: 
-        'hi'
+        'ht'
         'in';
     }
 
-    #home_image{
-        grid-area: hi;
-        background-color: blue;
-
+    #home_title{
+        display: flex;
+        grid-area: ht;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 0;
+        top: 0;
+        background-color: #303030;
     }
 
-    #home_title{
+    #home_image{
         display: none;
     }
 
     #home_info{
         grid-area: in;
-        background-color: red;
+        background-color: #D5D1C8;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -896,11 +923,16 @@ body{
 
     
     .home_info_box{
-        background-color: rgb(121, 117, 117);
+        background-color: #303030;
         height: 18%;
         width: 85%;
         margin: 0;
         border-radius: 25%;
+        right: 0;
+    }
+
+    .home_info_box h2{
+        color: #DFB960;
     }
 
     /* Shop Page CSS */
@@ -920,7 +952,7 @@ body{
     
     #shop_image{
         grid-area: si;
-        background-color: blueviolet;   
+        background-color: #DFB960;   
     }
     
     .shop_section{
@@ -964,7 +996,7 @@ body{
         margin: 0;
         cursor: pointer;
         display: flex;
-        background-color: white;
+        background-color: #303030;
         width: 60vw;
         height: 7vh;
         margin-top: 5vh;
