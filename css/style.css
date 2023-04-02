@@ -246,6 +246,10 @@ body {
     transition: all .5s;
 }
 
+.home_info_box:hover{
+    cursor: pointer;
+}
+
 .home_info_box h2 {
     color: #303030;
 }
@@ -343,17 +347,20 @@ body {
     display: inline-flex;
     opacity: 0;
     height: 0;
-    border: 0px solid black;
-    align-content: center;
-    justify-content: center;
+    border: 0px solid #303030;
+    align-content: space-around;
+    justify-content: space-between;
     width: 33vw;
-    animation: none;
+    animation: height 0.5s ease-in-out;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+    gap: 1vw;
 }
 
 .show_products {
     display: inline-flex;
     height: 40vh;
-    border: 1px solid black;
+    border: 1px solid #303030;
     opacity: 1;
     position: relative;
     width: 80vw;
@@ -372,44 +379,77 @@ body {
         width: 33vw;
         opacity: 0;
         border: 0;
-        height: 0;
+        max-height: 0;
     }
 
     50% {
         width: 80vw;
         opacity: 0;
-        border: 1px solid black;
-        height: 0;
+        border: 1px solid #303030;
+        max-height: 0;
+    }
+
+    75% {
+        opacity: 0.5;
+        max-height: calc(10vh + 0.5 * (100vh - 10vh));
     }
 
     100% {
         width: 80vw;
         opacity: 1;
-        border: 1px solid black;
-        height: 40vh;
+        border: 1px solid #303030;
+        max-height: 300vh;
+        height: fit-content;
     }
 }
 
 @keyframes hide_section {
     0% {
-        height: 40vh;
+        height: fit-content;
+        max-height: 300vh;
         width: 80vw;
         opacity: 1;
-        border: 1px solid black;
+        border: 1px solid #303030;
     }
 
     50% {
+        max-height: 0;
         width: 80vw;
         opacity: 0.5;
-        border: 1px solid black;
+        border: 1px solid #303030;
     }
 
     100% {
         height: 0;
+        max-height: 0;
         width: 80vw;
         opacity: 0;
         border: 0;
     }
+}
+
+
+.shop_item{
+    display: flex;
+    flex-direction: column;
+    width: 1vw;
+    height: 25vw;
+    background-color: #D5D1C8;
+    flex-basis: 25%;
+}
+
+.shop_item img{
+    width: 100%;
+}
+
+.shop_item h3{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.shop_item p{
+    text-align: center;
 }
 
 
@@ -882,6 +922,7 @@ body {
         align-content: center;
         right: 5vw;
         position: relative;
+        background-image: url(/img/general/LogoBlack.png);
     }
 
 
